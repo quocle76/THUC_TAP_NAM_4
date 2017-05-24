@@ -30,6 +30,7 @@
 					<p>Camera: 2x12 MP, Selfile: 7MP</p>
 					<p>PIN: 2900mAh, SIM: 1 SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm -13%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>
@@ -50,6 +51,7 @@
 					<p>Camera: 2x12 MP, Selfile: 7MP</p>
 					<p>PIN: 2900mAh, SIM: 1 SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm -13%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>
@@ -70,6 +72,7 @@
 					<p>Camera: 2x12 MP, Selfile: 7MP</p>
 					<p>PIN: 2900mAh, SIM: 1 SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm -13%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>
@@ -90,6 +93,7 @@
 					<p>Camera: 2x12 MP, Selfile: 7MP</p>
 					<p>PIN: 2900mAh, SIM: 1 SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm -13%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>
@@ -110,6 +114,7 @@
 					<p>Camera: 2x12 MP, Selfile: 7MP</p>
 					<p>PIN: 2900mAh, SIM: 1 SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm -13%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>

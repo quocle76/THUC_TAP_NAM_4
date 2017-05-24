@@ -38,7 +38,8 @@
 body {
 	background: #f0f0f0;
 }
-#mod-header {
+#mod-header, #mod-header-detail  {
+	margin-bottom: 100px;
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -354,6 +355,7 @@ body {
 			}
 		}
 	}
+	// product-km
 	.floor__title1 {
 		border-top: 4px solid #206d29!important;
 		position: relative;
@@ -362,28 +364,138 @@ body {
     		margin-bottom: 4px;
     		.floor__text1 {
     			background: #206d29!important;
-    			.floor__text__val {
-    				font-size: 13px;
-				    font-weight: 700;
-				    text-transform: uppercase;
-    			}
+    			padding-top: 10px;
+    			
     		}
-    		.floor__number {
-				box-shadow: 0 5px 5px;
-			    position: absolute;
-			    top: -8px;
-			    width: 46px;
-			    height: 46px;
-			    left: 74px;
-			    background: #fff;
-			    border-radius: 50%;
-			    text-align: center;
-			    font-size: 24px;
-			    font-weight: 700;
-			    line-height: 46px;
-			    overflow: hidden;
-    		}
+    		
+		}
+		.floor__text__val {
+			font-size: 13px;
+		    text-transform: uppercase;
+		    float: left;
+		    padding: 10px;
+		    font-family: 'Roboto-Bold';
+		}
+		.floor__number {
+			box-shadow: 0 5px 5px;
+		    position: absolute;
+		    top: -8px;
+		    width: 46px;
+		    height: 46px;
+		    left: 74px;
+		    background: #fff;
+		    border-radius: 50%;
+		    text-align: center;
+		    font-size: 24px;
+		    font-weight: 700;
+		    line-height: 46px;
+		    overflow: hidden;
+		     font-family: 'Roboto-Bold';
+		}
+		.floor__name {
+			background: linear-gradient(135deg,rgb(255, 255, 255) 30%,#206d29 90%,#F2F2F2 30%,#F2F2F2 30%,#F2F2F2 100%);
+		    margin-left: 103px;
+		    background-color: #E9EAED;
+		    padding: 0 30px;
+		    font-size: 13px;
+		    color: #545351;
+		    text-transform: uppercase;
+		    font-weight: 700;
+		    padding-top: 10px;
+		     font-family: 'Roboto-Bold';
+		}
+		.list-item-km {
+			margin-top: 20px;
+			.item {
+				position: relative;
+				background: #fff;
+				box-shadow: 0 0 5px #3e8049;
+				border-radius: 4px;
+				padding: 24px 10px 10px 10px;
+				margin-bottom: 24px;
+				&:hover {
+					.des-full {
+						display: block;
+					}
+					.link-km {
+						display: block;
+					}
+				}
+				p {
+					font-family: "Roboto-Regular";
+					font-size: 14px;
+				}
+				img {
+					width: 220px;
+					height: 220px;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+
+				}
+				h3 {
+					font-family: "Roboto-Bold";
+					font-size: 14px;
+					color: #333;
+				}
+				.primary-km-price {
+					color: #c10017;
+					font-family: "Roboto-Medium";
+					font-weight: bold;
+					font-size: 16px;
+				}
+				.fore-km-price {
+					text-decoration: line-through;
+					float: right;
+				}
+				.des-full {
+					display: none;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: #fff;
+					top: 0;
+					left: 0;
+					padding: 10px;
+					border-radius: 4px;
+					h3 {
+						color: #4198db;
+					}
+					z-index: 9;
+				}
+				.link-km {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: #fff;
+					top: 0;
+					left: 0;
+					display: none;
+					z-index: 10;
+					background: rgba(255, 255, 255, 0);
+				}
+				.iconlct{
+					position: absolute;
+					top:0px;
+					left: 0px;
+					border-radius: 4px 0 0 0;
+					min-width: 96px;
+				    background: linear-gradient(123deg,rgb(237, 22, 29) 20%,#ed161d 87%,#ffffff 30%,#ffffff 61%,#fff 100%);
+				    line-height: 14px;
+				    max-height: 22px;
+				    padding: 3px 13px;
+				    position: absolute;
+				    color: white;
+				    background-color: red!important;
+				    z-index: 1;
+				    font-size: 11px;
+				    font-weight: bold;
+				}
+
+			}
 		}
 	}
+	//end
+
 
 }
