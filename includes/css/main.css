@@ -1,0 +1,16 @@
+.container {
+	max-width: 1560px;
+	width: 100%;
+}
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+.clearfix {
+	clear: both;
+    font-size: 0;
+    height: 0;
+}
+.module {
+	margin-top: 20px;
+}

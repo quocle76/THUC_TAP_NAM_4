@@ -1,0 +1,2 @@
+https://goweb.vn/kien-thuc-web-vi/thiet-ke-web/cach-su-dung-sass-css-699.html
+sass --watch style.scss:style.css

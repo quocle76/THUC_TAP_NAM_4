@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="34px" height="30px" viewBox="0 0 34 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header1" transform="translate(-1231.000000, -48.000000)">
+            <g id="Group-2" transform="translate(1232.000000, 47.000000)">
+                <g id="card">
+                    <g id="iconCard">
+                        <rect id="Rectangle-2" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M23.3333333,27.3333333 C23.3333333,28.4373333 24.2293333,29.3333333 25.3333333,29.3333333 C26.4373333,29.3333333 27.3333333,28.4373333 27.3333333,27.3333333 C27.3333333,26.2293333 26.4373333,25.3333333 25.3333333,25.3333333 C24.2293333,25.3333333 23.3333333,26.2293333 23.3333333,27.3333333 L23.3333333,27.3333333 Z" id="Stroke-1453" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M8.66666667,27.3333333 C8.66666667,28.4373333 9.56266667,29.3333333 10.6666667,29.3333333 C11.7706667,29.3333333 12.6666667,28.4373333 12.6666667,27.3333333 C12.6666667,26.2293333 11.7706667,25.3333333 10.6666667,25.3333333 C9.56266667,25.3333333 8.66666667,26.2293333 8.66666667,27.3333333 L8.66666667,27.3333333 Z" id="Stroke-1454" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Stroke-1455" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="0.666666667 2.66666667 5.33333333 2.66666667 10.6666667 25.3333333 25.3333333 25.3333333"></polyline>
+                        <polyline id="Stroke-1456" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="10.0390667 22.6666667 27.3337333 22.6666667 31.3337333 10.6666667 7.33373333 10.6666667"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
