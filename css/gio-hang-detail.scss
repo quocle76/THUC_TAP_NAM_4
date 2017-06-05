@@ -1,0 +1,216 @@
+#mod-header-detail {
+	background: #f0f0f0;
+	.gio-hang-detail {
+		max-width: 600px;
+		margin-top: 50px;
+	}
+	.content-gio-hang-detail {
+		.action-gio-hang {
+			color: 	#288ad6;
+			font-family: 'Roboto-Regular';
+			font-size: 14px;
+			
+			a {
+				float: left;
+			}
+			 p {
+			 	color: #333;
+			 	font-size: 15px;
+			 	float: right;
+			 }
+
+		}
+		 .wrap_cart {
+		 	background: #fff;
+		 	margin: auto;
+		    background: #fff;
+		    border: 1px solid #d8d8d8;
+		    box-shadow: 0 0 20px rgba(0,0,0,.15);
+		    padding: 16px;
+		    .item-gio-hang {
+		    	border-bottom: 1px solid #f5f5f5;
+		    	margin: 5px 0;
+		    	
+		    }
+		    .tongPrice {
+				margin: 5px 16px 0 16px;
+				padding-top: 5px;
+				.textTongtien, .priceGia {
+		    		float: left;
+		    		font-size: 14px;
+		    		color: #333;
+		    		font-family: 'Roboto-Bold';
+		    		margin: 0;
+		    	}
+		    	.priceGia {
+					float: right;
+					font-size: 16px;
+					color: #c10017;
+		    	}
+		    	.codeGiamgia {
+		    		float: right;
+		    		margin: 0;
+		    	}
+			}
+			.image-product-gio-hang {
+			 	img {
+			 		width: 75px;
+			 		height: 75px;
+			 	}
+			 	button {
+			 		display: block;
+				    text-align: center;
+				    font-size: 12px;
+				    color: #999;
+				    width: 52px;
+				    border: 0;
+				    background: #fff;
+				    margin: auto;
+				    cursor: pointer;
+				    margin-top: 16px;
+				    
+			 	}
+			}
+			.name-color {
+				p {
+					font-family: 'Roboto-Regular';
+					color: #333;
+					span {
+						font-family: 'Roboto-Medium';
+					}
+				}
+			}
+			.querty {
+				.choosenumber {
+				    float: right;
+				    overflow: hidden;
+				    position: relative;
+				    border: 1px solid #dfdfdf;
+				    background: #fff;
+				    border-radius: 3px;
+				    line-height: 32px;
+				    font-size: 14px;
+				    color: #333;
+				    margin: 5px 0 5px 0;
+				    float: left;
+				    .abate {
+					    float: left;
+					    border-right: 1px solid #dfdfdf;
+					    background: #fff;
+					    height: 32px;
+					    width: 36px;
+					    color: #333;
+					    position: relative;
+					    cursor: pointer;
+					    pointer-events: none; 
+					    &::before {
+					    	content: '';
+						    width: 12px;
+						    height: 2px;
+						    background: #ccc;
+						    display: block;
+						    margin: 15px auto;
+					    }
+					}
+					.number {
+					    font-size: 14px;
+					    color: #333;
+					    float: left;
+					    height: 32px;
+					    text-align: center;
+					    width: 26px;
+					}
+					.augment {
+					    float: right;
+					    border-left: 1px solid #dfdfdf;
+					    background: #fff;
+					    height: 32px;
+					    position: relative;
+					    cursor: pointer;
+					    width: 36px;
+					    &::before {
+						    content: '';
+						    width: 12px;
+						    height: 2px;
+						    background: #288ad6;
+						    display: block;
+						    margin: 15px auto;
+						}
+						&::after {
+							content: '';
+						    width: 2px;
+						    height: 12px;
+						    background: #288ad6;
+						    display: block;
+						    margin: 0 auto;
+						    position: absolute;
+						    top: 10px;
+						    left: 0;
+						    right: 0;
+						}
+					}
+				}
+			}
+			 h1 {
+			 	font-family: 'Roboto-Bold';
+			 	font-size: 14px;
+			 	color: #333;
+			 	margin: 0;
+			 	margin-bottom: 16px;
+			 	&:hover {
+			 		color: #288ad6;
+			 	}
+			}
+			.price-gioi-hang {
+				color: #c10017;
+				font-family: 'Roboto-Medium';
+				font-size: 14px;
+			}
+			.thongTinGiaohang {
+				margin: 0 16px;
+				label {
+					margin-right: 16px;
+				}
+				input[type="radio"]:checked+label {
+					font-size: 16px;
+					color: #c10017;
+				}
+				
+				input[type="text"] {
+					width: 100%;
+					padding: 19px 8px;
+					margin-bottom: 8px;
+				    height: 20px;
+				    border-radius: 4px;
+				    border: 1px solid #d9d9d9;
+				}
+				input[name="sdt"] {
+					width: 49%;
+					float: left;
+				}
+				input[name="name"] {
+					width: 49%;
+					float: right;
+
+				}
+				input[name="phuong-xa"] {
+					width: 49%;
+					float: right;
+				}
+				select {
+					width: 49%;
+					float: left;
+				    padding: 11px 8px;
+			    	margin-bottom: 8px;
+				    border-radius: 4px;
+				    height: 40px;
+				    border: 1px solid #d9d9d9;
+				}
+			}
+
+		}
+	}
+	footer {
+		display: none;
+	}
+}

@@ -13,105 +13,35 @@
 	<div class="column-1 column"></div>
 	<div class="clearfix"></div>
 	<div class="list-item-km">
+			<?php 
+				$sql= "SELECT * FROM product WHERE type = 1";
+				$query = mysql_query($sql);
+				while($row = mysql_fetch_array($query)){
+			?>
 		<div class="col-md-3">
 			<div class="item">
-				<img src="images/product/pr1.jpg">
+				<img src="<?php echo 'images/product/'.$row['images'] ; ?>">
 				<div class="des">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p><span class="primary-km-price">25.990.000</span><span class="fore-km-price">26.550.000</span>₫</p>
+					<h3><?php echo $row['name'] ?></h3>
+					<p><span class="primary-km-price"><?php echo number_format($row['price']-$row['price']*$row['promotion']/100,3).'₫'; ?></span><span class="fore-km-price"><?php echo number_format($row['price'],3).'₫' ?></span></p>
 					<div class="clearfix"></div>
 				</div>
 				<div class="des-full">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p>25.990.000 ₫</p>
-					<p>HDH: iOS 10</p>
-					<p>CPU: Apple A10 Fusion 4nhân</p>
-					<p>RAM: 3Gb, Ram: 256Gb</p>
-					<p>Camera: 2x12 MP, Selfile: 7MP</p>
-					<p>PIN: 2900mAh, SIM: 1 SIM</p>
+					<h3><?php echo $row['name']; ?></h3>
+					<p><?php echo $row['price']?> ₫</p>
+					<p>HDH: <?php echo $row['hdh'] ?></p>
+					<p>CPU: <?php echo $row['cpu'] ?></p>
+					<p>ROM: <?php echo $row['rom'] ?>Gb, Ram: <?php echo $row['ram'] ?>Gb</p>
+					<p>Camera: <?php echo $row['camera'] ?> MP, Selfile: <?php echo $row['selfile'] ?>MP</p>
+					<p>PIN: <?php echo $row['pin'] ?>mAh, SIM: <?php echo $row['sim'] ?> SIM</p>
 				</div>
+				<span class="iconlct vuacohang">&nbsp;Giảm - <?php echo $row['promotion']?>%&nbsp;</span>
 				<a href="dâdâđâ" class="link-km"></a>
 			</div>
 		</div>
-		<div class="col-md-3">
-			<div class="item">
-				<img src="images/product/pr1.jpg">
-				<div class="des">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p><span class="primary-km-price">25.990.000</span><span class="fore-km-price">26.550.000</span>₫</p>
-					<div class="clearfix"></div>
-				</div>
-				<div class="des-full">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p>25.990.000 ₫</p>
-					<p>HDH: iOS 10</p>
-					<p>CPU: Apple A10 Fusion 4nhân</p>
-					<p>RAM: 3Gb, Ram: 256Gb</p>
-					<p>Camera: 2x12 MP, Selfile: 7MP</p>
-					<p>PIN: 2900mAh, SIM: 1 SIM</p>
-				</div>
-				<a href="dâdâđâ" class="link-km"></a>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item">
-				<img src="images/product/pr1.jpg">
-				<div class="des">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p><span class="primary-km-price">25.990.000</span><span class="fore-km-price">26.550.000</span>₫</p>
-					<div class="clearfix"></div>
-				</div>
-				<div class="des-full">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p>25.990.000 ₫</p>
-					<p>HDH: iOS 10</p>
-					<p>CPU: Apple A10 Fusion 4nhân</p>
-					<p>RAM: 3Gb, Ram: 256Gb</p>
-					<p>Camera: 2x12 MP, Selfile: 7MP</p>
-					<p>PIN: 2900mAh, SIM: 1 SIM</p>
-				</div>
-				<a href="dâdâđâ" class="link-km"></a>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item">
-				<img src="images/product/pr1.jpg">
-				<div class="des">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p><span class="primary-km-price">25.990.000</span><span class="fore-km-price">26.550.000</span>₫</p>
-					<div class="clearfix"></div>
-				</div>
-				<div class="des-full">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p>25.990.000 ₫</p>
-					<p>HDH: iOS 10</p>
-					<p>CPU: Apple A10 Fusion 4nhân</p>
-					<p>RAM: 3Gb, Ram: 256Gb</p>
-					<p>Camera: 2x12 MP, Selfile: 7MP</p>
-					<p>PIN: 2900mAh, SIM: 1 SIM</p>
-				</div>
-				<a href="dâdâđâ" class="link-km"></a>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="item">
-				<img src="images/product/pr1.jpg">
-				<div class="des">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p><span class="primary-km-price">25.990.000</span><span class="fore-km-price">26.550.000</span>₫</p>
-					<div class="clearfix"></div>
-				</div>
-				<div class="des-full">
-					<h3>iPhone 7 Plus 256Gb</h3>
-					<p>25.990.000 ₫</p>
-					<p>HDH: iOS 10</p>
-					<p>CPU: Apple A10 Fusion 4nhân</p>
-					<p>RAM: 3Gb, Ram: 256Gb</p>
-					<p>Camera: 2x12 MP, Selfile: 7MP</p>
-					<p>PIN: 2900mAh, SIM: 1 SIM</p>
-				</div>
-				<a href="dâdâđâ" class="link-km"></a>
-			</div>
-		</div>
+		<?php 
+				}
+			?>
+		<div class="clearfix"></div>
 	</div>
 </div>

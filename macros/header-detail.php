@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+include ('conn.php');
+?>
 <html>
 <head>
 	<title>Website Bán Điện Thoại</title>
@@ -6,13 +10,16 @@
 	<link rel="stylesheet" type="text/css" href="includes/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="includes/css/main.css">
+	<link rel="stylesheet" type="text/css" href="includes/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="includes/css/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-detail-product.css">
+	<link rel="stylesheet" type="text/css" href="css/gio-hang-detail.css">
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 </head>
 <body>
 	<div id="mod-header-detail" class="module">
-		<div class="container">
+				<div class="container">
 			<div class="content">
 				<div class="logo">
 					<img src="images/logo.jpg" class="img-fluid">
@@ -29,19 +36,24 @@
 					</form>
 				</div>
 				<div class="sign-in-out">
+				<?php if(empty($_SESSION['name_user'])) { ?>
 					<div class="none-sigin">
 						<div class="list-button">
-							<a href="" class="login">ĐĂNG NHẬP</a>
+							<a href="#" class="loginDN">ĐĂNG NHẬP</a>
 							<a href="" class="btn btn-primary register">ĐĂNG KÝ</a>
 						</div>
 					</div>
+				<?php 
+					} 
+				?>
+				<?php if(!empty($_SESSION['name_user'])) { ?>
 					<div class="done-sigin">
 						<div class="info">
 							<div class="avatar">
 								<img src="images/avatar.jpg" class="img-fluid">
 							</div>
 							<div class="text">
-								<p class="user">Chào Admin</p>
+								<p class="user"><?php echo $_SESSION['name_user'] ?></p>
 								<p>Tài khoản và đơn hàng</p>
 								<b class="arrow-user"></b>
 							</div>
@@ -59,12 +71,19 @@
 			                    <a href="profile.html">Thông tin tài khoản</a>
 			                  </li>
 			                  <li>
-			                    <a href="">Thoát</a>
+			                    <a href="macros/sign-out.php">Thoát</a>
 			                  </li>
 			                </ul>
               			</div>
 					</div>
+				<?php 
+					} 
+					else {
+
+					}
+				?>
 					<div class="clearfix"></div>
+
 				</div>
 				<div class="card">
             		<div class="img-card">
@@ -96,16 +115,15 @@
 				      <ul class="nav navbar-nav">
 				        <li class="active category "><a href="#"> <i class="fa fa-align-justify"></i>  DANH MỤC SẢN PHẨM</a>
 				        	<ul class="sub-category">
-					            <li><a href="#"> <i class="fa fa-angle-right"></i> iPhone(Apple)</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Samsung</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> OPPO</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Sony</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> LG</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Asus</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Huawei</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Lenovo</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Xiaomi</a></li>
-					            <li><a href="#"><i class="fa fa-angle-right"></i> Motorola</a></li>
+				        	<?php 
+				        		$sql = 'SELECT * FROM category';
+				        		$query = mysql_query($sql);
+				        		while ($category = mysql_fetch_array($query)) { ?>
+				        	
+					            <li><a href="<?php echo $category['link_category'] ?>"> <i class="fa fa-angle-right"></i> <?php echo $category['name_category'] ?></a></li>
+					        <?php		
+				        		}
+				        	 ?>
 				          </ul>
 				        </li>
 				        <li class="dropdown">
@@ -136,3 +154,35 @@
 			<div class="clearfix"></div>
 			<?php include('macros/cam-ket.php'); ?>
 		</div>
+		<div class="wrap">
+			<div class="avatarLG">
+	     		 <img src="images/avatar.jpg">
+			</div>
+			<i></i>
+
+			<form method="POST">
+				<input type="text" placeholder="username" name="id_user" required>
+				<input type="password" placeholder="password" name="pass_user" required>
+				<button type="submit" name="submitSig">Sign in</button>
+			</form>
+			<?php 
+				if(!isset($_POST['submitSig'])) {
+					
+				}
+				else {
+					$id_user = $_POST['id_user'];
+					$pass_user = $_POST['pass_user'];
+					$sql = "SELECT * FROM `user` WHERE `email_user`='$id_user' AND `pass_user`=$pass_user";
+					$query = mysql_query($sql);
+					$row = mysql_fetch_array($query);
+					$total = mysql_numrows($query);
+					if($total > 0){
+						$_SESSION['name_user'] = $row['name_user'];
+					}
+					else {
+						echo  '<p style="color: red; font-size: 16px;"> Tài khoản hoặc mật khẩu của bạn bị sai.</p>';
+					}
+				}
+			?>
+			<img src="images/bidy-close.png" class="close-login">
+		</div> 

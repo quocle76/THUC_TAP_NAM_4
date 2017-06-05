@@ -20,7 +20,7 @@ body {
   background: #f0f0f0; }
 
 #mod-header, #mod-header-detail {
-  margin-bottom: 100px; }
+  position: relative; }
   #mod-header .content, #mod-header-detail .content {
     display: flex;
     justify-content: space-between;
@@ -28,6 +28,87 @@ body {
   #mod-header .logo, #mod-header-detail .logo {
     float: left;
     margin-bottom: 4px; }
+  #mod-header .wrap, #mod-header-detail .wrap {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -23px;
+    display: none;
+    background-color: rgba(51, 51, 51, 0.52);
+    text-align: center;
+    transition: all 2s; }
+    #mod-header .wrap .close-login, #mod-header-detail .wrap .close-login {
+      position: absolute;
+      top: 12%;
+      right: 36%; }
+  #mod-header .avatarLG, #mod-header-detail .avatarLG {
+    width: 100%;
+    margin: auto;
+    width: 65px;
+    border-radius: 100px;
+    height: 65px;
+    background: #448ed3;
+    position: relative;
+    bottom: -15px;
+    margin-top: 200px; }
+  #mod-header .avatarLG img, #mod-header-detail .avatarLG img {
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    margin: auto;
+    border: 3px solid #fff;
+    display: block; }
+  #mod-header .wrap input, #mod-header-detail .wrap input {
+    border: none;
+    background: #fff;
+    font-family: Lato;
+    font-weight: 700;
+    display: block;
+    height: 40px;
+    outline: none;
+    width: calc(100% - 24px);
+    margin: auto;
+    padding: 6px 12px 6px 12px;
+    width: 400px; }
+  #mod-header .bar, #mod-header-detail .bar {
+    height: 1px;
+    background: #fff;
+    width: 400px; }
+  #mod-header .bar i, #mod-header-detail .bar i {
+    width: 400px;
+    margin: auto;
+    height: 1px;
+    display: block;
+    background: #d1d1d1; }
+  #mod-header .wrap input[type="text"], #mod-header-detail .wrap input[type="text"] {
+    border-radius: 7px 7px 0px 0px;
+    border-bottom: 1px solid #ddd; }
+  #mod-header .wrap input[type="password"], #mod-header-detail .wrap input[type="password"] {
+    border-radius: 0px 0px 7px 7px; }
+  #mod-header .forgot_link, #mod-header-detail .forgot_link {
+    color: #83afdf;
+    color: #83afdf;
+    text-decoration: none;
+    font-size: 11px;
+    position: relative;
+    left: 193px;
+    top: -36px; }
+  #mod-header .wrap button, #mod-header-detail .wrap button {
+    width: 100%;
+    border-radius: 7px;
+    background: #b6ee65;
+    text-decoration: center;
+    border: none;
+    color: #51771a;
+    margin-top: -5px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    outline: none;
+    font-size: 13px;
+    border-bottom: 3px solid #307d63;
+    cursor: pointer;
+    width: 400px; }
   #mod-header .search, #mod-header-detail .search {
     max-width: 600px;
     width: 100%;
@@ -89,7 +170,7 @@ body {
     #mod-header .sign-in-out .none-sigin, #mod-header .sign-in-out .done-sigin, #mod-header .sign-in-out .card, #mod-header-detail .sign-in-out .none-sigin, #mod-header-detail .sign-in-out .done-sigin, #mod-header-detail .sign-in-out .card {
       float: left; }
     #mod-header .sign-in-out .none-sigin, #mod-header-detail .sign-in-out .none-sigin {
-      display: none; }
+      display: block; }
     #mod-header .sign-in-out .list-button a, #mod-header-detail .sign-in-out .list-button a {
       text-decoration: none; }
     #mod-header .sign-in-out .list-button .login, #mod-header-detail .sign-in-out .list-button .login {
@@ -181,7 +262,7 @@ body {
         list-style: none;
         text-decoration: none;
         border-bottom: 1px solid #ededed;
-        padding-bottom: 15px;
+        padding-bottom: 13px;
         padding-right: 110px;
         position: relative; }
         #mod-header .new-paper ul li a, #mod-header-detail .new-paper ul li a {
@@ -247,7 +328,7 @@ body {
   #mod-header .camket, #mod-header-detail .camket {
     display: flex;
     justify-content: space-around;
-    padding: 10px; }
+    padding: 10px 10px 10px 36px; }
     #mod-header .camket ul, #mod-header-detail .camket ul {
       padding: 0;
       position: relative; }
@@ -261,7 +342,8 @@ body {
         font-family: 'Roboto-Bold';
         position: relative;
         padding-left: 52px;
-        padding-right: 10px; }
+        padding-right: 10px;
+        line-height: 26px; }
         #mod-header .camket ul li img, #mod-header-detail .camket ul li img {
           position: absolute;
           left: 0; }
@@ -361,13 +443,21 @@ body {
         #mod-header .floor__title1 .list-item-km .item .link-km, #mod-header-detail .floor__title1 .list-item-km .item .link-km {
           position: absolute;
           width: 100%;
-          height: 100%;
+          height: 90%;
           background: #fff;
           top: 0;
           left: 0;
           display: none;
           z-index: 10;
           background: rgba(255, 255, 255, 0); }
+        #mod-header .floor__title1 .list-item-km .item .addcart, #mod-header-detail .floor__title1 .list-item-km .item .addcart {
+          position: absolute;
+          bottom: 0;
+          color: #fff;
+          right: 0;
+          background: #FF0000;
+          border: none;
+          padding: 4px 5px; }
         #mod-header .floor__title1 .list-item-km .item .iconlct, #mod-header-detail .floor__title1 .list-item-km .item .iconlct {
           position: absolute;
           top: 0px;
@@ -384,5 +474,38 @@ body {
           z-index: 1;
           font-size: 11px;
           font-weight: bold; }
+  #mod-header #back-top img, #mod-header-detail #back-top img {
+    width: 3%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -transition: all .2s linear; }
+  #mod-header footer, #mod-header-detail footer {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+    clear: both; }
+    #mod-header footer .rowfoot1, #mod-header-detail footer .rowfoot1 {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px 0; }
+      #mod-header footer .rowfoot1 .colfoot, #mod-header-detail footer .rowfoot1 .colfoot {
+        width: 33%;
+        display: inline-block;
+        list-style: none;
+        font-size: 14px;
+        font-family: 'Roboto-Medium'; }
+    #mod-header footer .rowfoot2, #mod-header-detail footer .rowfoot2 {
+      width: 100%;
+      overflow: hidden;
+      background: #f8f8f8;
+      padding: 10px 10px; }
 
 /*# sourceMappingURL=style.css.map */

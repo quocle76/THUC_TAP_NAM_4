@@ -1,0 +1,169 @@
+#mod-header-detail {
+  background: #f0f0f0; }
+  #mod-header-detail .gio-hang-detail {
+    max-width: 600px;
+    margin-top: 50px; }
+  #mod-header-detail .content-gio-hang-detail .action-gio-hang {
+    color: #288ad6;
+    font-family: 'Roboto-Regular';
+    font-size: 14px; }
+    #mod-header-detail .content-gio-hang-detail .action-gio-hang a {
+      float: left; }
+    #mod-header-detail .content-gio-hang-detail .action-gio-hang p {
+      color: #333;
+      font-size: 15px;
+      float: right; }
+  #mod-header-detail .content-gio-hang-detail .wrap_cart {
+    background: #fff;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 16px; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .item-gio-hang {
+      border-bottom: 1px solid #f5f5f5;
+      margin: 5px 0; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .tongPrice {
+      margin: 5px 16px 0 16px;
+      padding-top: 5px; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .tongPrice .textTongtien, #mod-header-detail .content-gio-hang-detail .wrap_cart .tongPrice .priceGia {
+        float: left;
+        font-size: 14px;
+        color: #333;
+        font-family: 'Roboto-Bold';
+        margin: 0; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .tongPrice .priceGia {
+        float: right;
+        font-size: 16px;
+        color: #c10017; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .tongPrice .codeGiamgia {
+        float: right;
+        margin: 0; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .image-product-gio-hang img {
+      width: 75px;
+      height: 75px; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .image-product-gio-hang button {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      width: 52px;
+      border: 0;
+      background: #fff;
+      margin: auto;
+      cursor: pointer;
+      margin-top: 16px; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .name-color p {
+      font-family: 'Roboto-Regular';
+      color: #333; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .name-color p span {
+        font-family: 'Roboto-Medium'; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber {
+      float: right;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #dfdfdf;
+      background: #fff;
+      border-radius: 3px;
+      line-height: 32px;
+      font-size: 14px;
+      color: #333;
+      margin: 5px 0 5px 0;
+      float: left; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .abate {
+        float: left;
+        border-right: 1px solid #dfdfdf;
+        background: #fff;
+        height: 32px;
+        width: 36px;
+        color: #333;
+        position: relative;
+        cursor: pointer;
+        pointer-events: none; }
+        #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .abate::before {
+          content: '';
+          width: 12px;
+          height: 2px;
+          background: #ccc;
+          display: block;
+          margin: 15px auto; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .number {
+        font-size: 14px;
+        color: #333;
+        float: left;
+        height: 32px;
+        text-align: center;
+        width: 26px; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .augment {
+        float: right;
+        border-left: 1px solid #dfdfdf;
+        background: #fff;
+        height: 32px;
+        position: relative;
+        cursor: pointer;
+        width: 36px; }
+        #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .augment::before {
+          content: '';
+          width: 12px;
+          height: 2px;
+          background: #288ad6;
+          display: block;
+          margin: 15px auto; }
+        #mod-header-detail .content-gio-hang-detail .wrap_cart .querty .choosenumber .augment::after {
+          content: '';
+          width: 2px;
+          height: 12px;
+          background: #288ad6;
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          right: 0; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart h1 {
+      font-family: 'Roboto-Bold';
+      font-size: 14px;
+      color: #333;
+      margin: 0;
+      margin-bottom: 16px; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart h1:hover {
+        color: #288ad6; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .price-gioi-hang {
+      color: #c10017;
+      font-family: 'Roboto-Medium';
+      font-size: 14px; }
+    #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang {
+      margin: 0 16px; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang label {
+        margin-right: 16px; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang input[type="radio"]:checked + label {
+        font-size: 16px;
+        color: #c10017; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang input[type="text"] {
+        width: 100%;
+        padding: 19px 8px;
+        margin-bottom: 8px;
+        height: 20px;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang input[name="sdt"] {
+        width: 49%;
+        float: left; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang input[name="name"] {
+        width: 49%;
+        float: right; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang input[name="phuong-xa"] {
+        width: 49%;
+        float: right; }
+      #mod-header-detail .content-gio-hang-detail .wrap_cart .thongTinGiaohang select {
+        width: 49%;
+        float: left;
+        padding: 11px 8px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        height: 40px;
+        border: 1px solid #d9d9d9; }
+  #mod-header-detail footer {
+    display: none; }
+
+/*# sourceMappingURL=gio-hang-detail.css.map */

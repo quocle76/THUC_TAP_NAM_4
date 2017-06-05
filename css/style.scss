@@ -39,7 +39,7 @@ body {
 	background: #f0f0f0;
 }
 #mod-header, #mod-header-detail  {
-	margin-bottom: 100px;
+	position: relative;
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -48,6 +48,98 @@ body {
 	.logo {
 		float: left;
 		margin-bottom: 4px;
+	}
+	.wrap {
+		z-index: 999;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -23px;
+		display: none;
+		background-color: rgba(51, 51, 51, 0.52);
+		text-align: center;
+		transition:   all 2s;
+		.close-login {
+			position: absolute;
+			top: 12%;
+			right: 36%;
+		}
+	}
+	.avatarLG {
+		width: 100%;
+		margin: auto;
+		width: 65px;
+		border-radius: 100px;
+		height: 65px;
+		background: #448ed3 ;
+		position: relative;
+		bottom: -15px;
+		margin-top: 200px;
+	}
+	.avatarLG img {
+		width: 65px;
+		height: 65px;
+		border-radius: 100px;
+		margin: auto;
+		border:3px solid #fff;
+		display: block;
+	}
+	.wrap input {
+		border: none;
+		background: #fff;
+	  font-family:Lato ;
+	  font-weight:700 ;
+		display: block;
+		height: 40px;
+		outline: none;
+		width: calc(100% - 24px) ;
+		margin: auto;
+		padding: 6px 12px 6px 12px;
+		width: 400px;
+	}
+	.bar {
+		height: 1px;
+		background: #fff ;
+		width: 400px;
+	}
+	.bar i {
+		width: 400px;
+		margin: auto;
+		height: 1px ;
+		display: block;
+		background: #d1d1d1;
+	}
+	.wrap input[type="text"] {
+		border-radius: 7px 7px 0px 0px ;
+		border-bottom: 1px solid #ddd;
+	}
+	.wrap input[type="password"] {
+		border-radius: 0px 0px 7px 7px ;
+	}
+	.forgot_link {
+		color: #83afdf ;
+		color: #83afdf;
+		text-decoration: none;
+		font-size: 11px;
+		position: relative;
+		left: 193px;
+		top: -36px;
+	}
+	.wrap button {
+		width: 100%;
+		border-radius: 7px;
+		background: #b6ee65;
+		text-decoration: center;
+		border: none;
+		color: #51771a;
+	  	margin-top:-5px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		outline: none;
+		font-size: 13px;	
+		border-bottom: 3px solid #307d63;
+		cursor: pointer;
+		width: 400px;
 	}
 	.search {
 		max-width: 600px;
@@ -126,7 +218,7 @@ body {
 			float: left;
 		}
 		.none-sigin {
-			display: none;
+			display: block;
 		}
 		.list-button {
 			a {
@@ -246,7 +338,7 @@ body {
 				list-style: none;
 				text-decoration: none;
 				border-bottom: 1px solid #ededed;
-				padding-bottom:15px;
+				padding-bottom:13px;
 				padding-right: 110px; 
 				position: relative;
 				a {
@@ -327,7 +419,7 @@ body {
 	.camket {
 		display: flex;
     	justify-content: space-around;
-    	padding: 10px;
+    	padding: 10px 10px 10px 36px;
 		ul {
 			padding: 0;
 			position: relative;
@@ -342,6 +434,9 @@ body {
 				position: relative;
 				padding-left: 52px;
 				padding-right: 10px;
+				// display: inline-flex;
+				// align-items: center;
+				line-height: 26px;
 				img {
 					position: absolute;
 					left: 0;
@@ -466,13 +561,22 @@ body {
 				.link-km {
 					position: absolute;
 					width: 100%;
-					height: 100%;
+					height: 90%;
 					background: #fff;
 					top: 0;
 					left: 0;
 					display: none;
 					z-index: 10;
 					background: rgba(255, 255, 255, 0);
+				}
+				.addcart {
+					position: absolute;
+					bottom: 0;
+					color: #fff;
+					right: 0;
+					background: #FF0000;
+					border: none;
+					padding: 4px 5px;
 				}
 				.iconlct{
 					position: absolute;
@@ -494,8 +598,50 @@ body {
 
 			}
 		}
+		
 	}
 	//end
+	#back-top {
+		img {
+			width: 3%;
+			cursor: pointer;
+			position: fixed;
+			bottom: 45px;
+			right: 20px;
+		 	-webkit-transition: all .2s linear;
+		    -moz-transition: all .2s linear;
+		    -o-transition: all .2s linear;
+		    -transition: all .2s linear;
 
+		}
+		
+	}
+	footer {
+		width: 100%;
+	    margin: 0 auto;
+	    background: #fff;
+	    overflow: hidden;
+	    clear: both;
+	    .rowfoot1 {
+		    display: inline-block;
+		    overflow: hidden;
+		    width: 100%;
+		    margin: 0 auto;
+		    padding: 15px 0;
+		    .colfoot {
+		    	width: 33%;
+		    	display: inline-block;
+		    	list-style: none;
+		    	font-size: 14px;
+		    	font-family: 'Roboto-Medium';
+		    }
+		}
+		.rowfoot2 {
+		    width: 100%;
+		    overflow: hidden;
+		    background: #f8f8f8;
+		    padding: 10px 10px;
+		}
+	}
 
 }

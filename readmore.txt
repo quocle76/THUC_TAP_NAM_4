@@ -1,2 +1,5 @@
 https://goweb.vn/kien-thuc-web-vi/thiet-ke-web/cach-su-dung-sass-css-699.html
+cd C:\xampp\htdocs\nam4\css
 sass --watch style.scss:style.css
+sass --watch style-detail-product.scss:style-detail-product.css
+sass --watch gio-hang-detail.scss:gio-hang-detail.css
