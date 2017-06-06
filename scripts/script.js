@@ -77,12 +77,18 @@ var sliderproductdetail = $('#slider-product-detail');
 	function CloseLogin(){
 		$('.close-login').click(function(){
 			$('.wrap').hide();
+			$('.registerL').hide();
 		});
 
 	}
 	function ShowDN() {
 		$('.loginDN').click(function(){
 			$('.wrap').show();
+		});
+	}
+	function ShowRE() {
+		$('.register').click(function(){
+			$('.registerL').show();
 		});
 	}
 $(document).ready(function(){
@@ -94,4 +100,5 @@ $(document).ready(function(){
 	scroll_topp();
 	CloseLogin();
 	ShowDN();
+	ShowRE();
 });

@@ -50,7 +50,7 @@ include ('conn.php');
 					<div class="done-sigin">
 						<div class="info">
 							<div class="avatar">
-								<img src="images/avatar.jpg" class="img-fluid">
+								<img src="images/<?php echo $_SESSION['avatar']?>" class="img-fluid">
 							</div>
 							<div class="text">
 								<p class="user"><?php echo $_SESSION['name_user'] ?></p>
@@ -178,9 +178,83 @@ include ('conn.php');
 					$total = mysql_numrows($query);
 					if($total > 0){
 						$_SESSION['name_user'] = $row['name_user'];
+						$_SESSION['avatar'] =  $row['avatar'];
 					}
 					else {
 						echo  '<p style="color: red; font-size: 16px;"> Tài khoản hoặc mật khẩu của bạn bị sai.</p>';
+					}
+				}
+			?>
+			<img src="images/bidy-close.png" class="close-login">
+		</div>
+		<div class="registerL">
+			<div class="avatarLG">
+	     		 <img src="images/avatar.jpg">
+			</div>
+			<i></i>
+			<form method="POST" enctype="multipart/form-data">
+				<input type="text" placeholder="username" name="user_gis" required>
+				<input type="text" placeholder="email" name="mail_gis" required>
+				<input type="password" placeholder="password" name="pass_gis" required>
+				<input type="password" placeholder="re-password" name="pass_gisre" required>
+				<input type="number" placeholder="phone" name="phone_gis" required>
+				<input type="text" placeholder="Địa chỉ" name='address_gis' required />
+				<input type="file" name="uploadFilee" id="uploadFilee" />
+				<button type="submit" name="submitRegis">Register</button>
+			
+			<?php 
+				if(!isset($_POST['submitRegis'])) {
+					die();
+				}
+				else {
+					$user_gis = $_POST['user_gis'];
+					$mail_gis = $_POST['mail_gis'];
+					$pass_gis = $_POST['pass_gis'];
+					$pass_gisre = $_POST['pass_gisre'];
+					$phone_gis = $_POST['phone_gis'];
+					$address_gis = $_POST['address_gis'];
+
+					if($_FILES['uploadFilee']['name'] != NULL){ // Đã chọn file
+				    	//Kiểm tra định dạng tệp tin
+					    	if($_FILES['uploadFilee']['type'] == "image/jpeg" || $_FILES['uploadFilee']['type'] == "image/png" || $_FILES['uploadFilee']['type'] == "image/gif"){
+					        //Tiếp tục kiểm tra dung lượng
+							        $maxFileSize = 10 * 1000 * 1000; //MB
+							        if($_FILES['uploadFilee']['size'] > ($maxFileSize * 1000 * 1000)){
+							            echo 'Tập tin không được vượt quá: '.$maxFileSize.' MB';
+					        		} 	else {
+							            //Hợp lệ tiếp tục xử lý Upload
+							            $path = 'images/'; //Lưu trữ tập tin vào thư mục: images
+							            $tmp_name = $_FILES['uploadFilee']['tmp_name'];
+							            $hinh = $_FILES['uploadFilee']['name'];
+							            $type = $_FILES['uploadFilee']['type']; 
+							            $size = $_FILES['uploadFilee']['size']; 
+							            //Upload file
+							            move_uploaded_file($tmp_name,$path.$hinh);
+					            
+					        		}
+						    	}
+						    	else 
+						    	{
+						        	echo 'Tập tin phải là hình ảnh';
+						    	}
+						
+					} else 
+					{
+						echo 'Vui lòng chọn tập tin';
+					}	 
+
+					if($user_gis && $mail_gis && $pass_gis && $pass_gisre && $phone_gis && $address_gis && $pass_gis == $pass_gisre){
+						$sql = "SELECT * FROM user WHERE email_user = '$mail_gis'";
+						$query = mysql_query($sql);
+						if(mysql_numrows($query) > 0){
+							echo 'Email tồn tại r nhé';
+						}
+						else {
+							$addmember = mysql_query("INSERT INTO `user` (`name_user`, `email_user`, `pass_user`, `phone_user`, `address_user`, `avatar`) VALUES ('$user_gis', '$mail_gis', '$pass_gis', '$phone_gis', '$address_gis', '$hinh')");
+						}
+					}
+					else {
+						echo 'Nhập đầy đủ thông tin';
 					}
 				}
 			?>

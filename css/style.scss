@@ -49,7 +49,7 @@ body {
 		float: left;
 		margin-bottom: 4px;
 	}
-	.wrap {
+	.wrap, .registerL {
 		z-index: 999;
 		position: absolute;
 		width: 100%;
@@ -64,6 +64,9 @@ body {
 			top: 12%;
 			right: 36%;
 		}
+	}
+	.registerL {
+		display: block;
 	}
 	.avatarLG {
 		width: 100%;
@@ -84,7 +87,7 @@ body {
 		border:3px solid #fff;
 		display: block;
 	}
-	.wrap input {
+	.wrap input, .registerL input {
 		border: none;
 		background: #fff;
 	  font-family:Lato ;
@@ -109,15 +112,24 @@ body {
 		display: block;
 		background: #d1d1d1;
 	}
-	.wrap input[type="text"] {
-		border-radius: 7px 7px 0px 0px ;
+	.wrap input[type="text"], .registerL input[type="text"] {
+		border-radius: 7px 7px 7px 7px ;
 		border-bottom: 1px solid #ddd;
 	}
-	.wrap input[type="password"] {
-		border-radius: 0px 0px 7px 7px ;
+	.registerL input[type="number"] {
+		border-radius: 7px 7px 7px 7px ;
+		border-bottom: 1px solid #ddd;
+	}
+	.registerL input[type="file"] {
+		border-radius: 7px 7px 7px 7px ;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.wrap input[type="password"], .registerL input[type="password"] {
+		border-radius: 7px 7px 7px 7px ;
+			border-bottom: 1px solid #ddd;
 	}
 	.forgot_link {
-		color: #83afdf ;
 		color: #83afdf;
 		text-decoration: none;
 		font-size: 11px;
@@ -125,7 +137,7 @@ body {
 		left: 193px;
 		top: -36px;
 	}
-	.wrap button {
+	.wrap button, .registerL button{
 		width: 100%;
 		border-radius: 7px;
 		background: #b6ee65;
@@ -515,6 +527,9 @@ body {
 					.link-km {
 						display: block;
 					}
+					.addcart {
+						display: block;
+					}
 				}
 				p {
 					font-family: "Roboto-Regular";
@@ -572,11 +587,19 @@ body {
 				.addcart {
 					position: absolute;
 					bottom: 0;
-					color: #fff;
 					right: 0;
-					background: #FF0000;
+					background: none;
 					border: none;
-					padding: 4px 5px;
+					display: none;
+					z-index: 999;
+					img {
+						height: 62px;
+    					width: 152px;
+					}
+					&:focus {
+						outline: none;
+						border: none;
+					}
 				}
 				.iconlct{
 					position: absolute;

@@ -28,7 +28,7 @@ body {
   #mod-header .logo, #mod-header-detail .logo {
     float: left;
     margin-bottom: 4px; }
-  #mod-header .wrap, #mod-header-detail .wrap {
+  #mod-header .wrap, #mod-header .registerL, #mod-header-detail .wrap, #mod-header-detail .registerL {
     z-index: 999;
     position: absolute;
     width: 100%;
@@ -38,10 +38,12 @@ body {
     background-color: rgba(51, 51, 51, 0.52);
     text-align: center;
     transition: all 2s; }
-    #mod-header .wrap .close-login, #mod-header-detail .wrap .close-login {
+    #mod-header .wrap .close-login, #mod-header .registerL .close-login, #mod-header-detail .wrap .close-login, #mod-header-detail .registerL .close-login {
       position: absolute;
       top: 12%;
       right: 36%; }
+  #mod-header .registerL, #mod-header-detail .registerL {
+    display: block; }
   #mod-header .avatarLG, #mod-header-detail .avatarLG {
     width: 100%;
     margin: auto;
@@ -59,7 +61,7 @@ body {
     margin: auto;
     border: 3px solid #fff;
     display: block; }
-  #mod-header .wrap input, #mod-header-detail .wrap input {
+  #mod-header .wrap input, #mod-header .registerL input, #mod-header-detail .wrap input, #mod-header-detail .registerL input {
     border: none;
     background: #fff;
     font-family: Lato;
@@ -81,20 +83,26 @@ body {
     height: 1px;
     display: block;
     background: #d1d1d1; }
-  #mod-header .wrap input[type="text"], #mod-header-detail .wrap input[type="text"] {
-    border-radius: 7px 7px 0px 0px;
+  #mod-header .wrap input[type="text"], #mod-header .registerL input[type="text"], #mod-header-detail .wrap input[type="text"], #mod-header-detail .registerL input[type="text"] {
+    border-radius: 7px 7px 7px 7px;
     border-bottom: 1px solid #ddd; }
-  #mod-header .wrap input[type="password"], #mod-header-detail .wrap input[type="password"] {
-    border-radius: 0px 0px 7px 7px; }
+  #mod-header .registerL input[type="number"], #mod-header-detail .registerL input[type="number"] {
+    border-radius: 7px 7px 7px 7px;
+    border-bottom: 1px solid #ddd; }
+  #mod-header .registerL input[type="file"], #mod-header-detail .registerL input[type="file"] {
+    border-radius: 7px 7px 7px 7px;
+    border-bottom: 1px solid #ddd; }
+  #mod-header .wrap input[type="password"], #mod-header .registerL input[type="password"], #mod-header-detail .wrap input[type="password"], #mod-header-detail .registerL input[type="password"] {
+    border-radius: 7px 7px 7px 7px;
+    border-bottom: 1px solid #ddd; }
   #mod-header .forgot_link, #mod-header-detail .forgot_link {
-    color: #83afdf;
     color: #83afdf;
     text-decoration: none;
     font-size: 11px;
     position: relative;
     left: 193px;
     top: -36px; }
-  #mod-header .wrap button, #mod-header-detail .wrap button {
+  #mod-header .wrap button, #mod-header .registerL button, #mod-header-detail .wrap button, #mod-header-detail .registerL button {
     width: 100%;
     border-radius: 7px;
     background: #b6ee65;
@@ -406,6 +414,8 @@ body {
           display: block; }
         #mod-header .floor__title1 .list-item-km .item:hover .link-km, #mod-header-detail .floor__title1 .list-item-km .item:hover .link-km {
           display: block; }
+        #mod-header .floor__title1 .list-item-km .item:hover .addcart, #mod-header-detail .floor__title1 .list-item-km .item:hover .addcart {
+          display: block; }
         #mod-header .floor__title1 .list-item-km .item p, #mod-header-detail .floor__title1 .list-item-km .item p {
           font-family: "Roboto-Regular";
           font-size: 14px; }
@@ -453,11 +463,17 @@ body {
         #mod-header .floor__title1 .list-item-km .item .addcart, #mod-header-detail .floor__title1 .list-item-km .item .addcart {
           position: absolute;
           bottom: 0;
-          color: #fff;
           right: 0;
-          background: #FF0000;
+          background: none;
           border: none;
-          padding: 4px 5px; }
+          display: none;
+          z-index: 999; }
+          #mod-header .floor__title1 .list-item-km .item .addcart img, #mod-header-detail .floor__title1 .list-item-km .item .addcart img {
+            height: 62px;
+            width: 152px; }
+          #mod-header .floor__title1 .list-item-km .item .addcart:focus, #mod-header-detail .floor__title1 .list-item-km .item .addcart:focus {
+            outline: none;
+            border: none; }
         #mod-header .floor__title1 .list-item-km .item .iconlct, #mod-header-detail .floor__title1 .list-item-km .item .iconlct {
           position: absolute;
           top: 0px;

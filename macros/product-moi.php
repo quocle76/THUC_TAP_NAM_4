@@ -47,6 +47,7 @@
 				 }
 				?>
 				<a href="dâdâđâ" class="link-km"></a>
+				<button class="addcart"><img src="images/addcart.png"></button>
 			</div>
 		</div>
 			<?php 
