@@ -43,7 +43,7 @@ body {
       top: 12%;
       right: 36%; }
   #mod-header .registerL, #mod-header-detail .registerL {
-    display: block; }
+    display: none; }
   #mod-header .avatarLG, #mod-header-detail .avatarLG {
     width: 100%;
     margin: auto;

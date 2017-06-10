@@ -87,7 +87,7 @@ var sliderproductdetail = $('#slider-product-detail');
 		});
 	}
 	function ShowRE() {
-		$('.register').click(function(){
+		$('.registerDK').click(function(){
 			$('.registerL').show();
 		});
 	}

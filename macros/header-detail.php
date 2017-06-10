@@ -18,6 +18,7 @@ include ('conn.php');
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 </head>
 <body>
+	
 	<div id="mod-header-detail" class="module">
 				<div class="container">
 			<div class="content">
@@ -90,7 +91,28 @@ include ('conn.php');
 		 				<a href=""><img src="images/card.svg" class="" alt=""></a>
 		            </div>
 		            <div class="text">
-		              <p><span>0</span> sản phẩm</p>
+		            <?php
+						$ok=1;
+						if(isset($_SESSION['cart']))
+						{
+							foreach($_SESSION['cart'] as $k=>$v)
+							{	
+								if(isset($k))
+								{
+								$ok=2;
+								}
+							}
+						}
+
+						if ($ok != 2)
+						 { ?> 
+		              		<p><span>0</span> sản phẩm</p>
+			              <?php } else {
+								$items = $_SESSION['cart'];?>
+								<p><span><?php echo count($items) ?></span> sản phẩm</p>
+								<?php 
+							}
+						?>
 		              <p><span>0</span> đ</p>
 		            </div>
 		            <div class="clearfix"></div>

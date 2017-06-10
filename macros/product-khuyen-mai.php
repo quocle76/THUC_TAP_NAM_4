@@ -36,8 +36,8 @@
 					<p>PIN: <?php echo $row['pin'] ?>mAh, SIM: <?php echo $row['sim'] ?> SIM</p>
 				</div>
 				<span class="iconlct vuacohang">&nbsp;Giảm - <?php echo $row['promotion']?>%&nbsp;</span>
-				<a href="dâdâđâ" class="link-km"></a>
-				<button class="addcart"><img src="images/addcart.png"></button>
+				<a href="detail-product.php?id=<?php echo $row['id'] ?>" class="link-km"></a>
+				<a  class="addcart" href="macros/addcart.php?item=<?php echo $row['id'] ?>"><img src="images/addcart.png"></a>
 			</div>
 		</div>
 		<?php 

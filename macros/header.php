@@ -17,6 +17,7 @@ include ('conn.php');
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 </head>
 <body>
+
 	<?php $link = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];?>
 	<div id="mod-header" class="module">
 		<div class="container">
@@ -40,7 +41,7 @@ include ('conn.php');
 					<div class="none-sigin">
 						<div class="list-button">
 							<a href="#" class="loginDN">ĐĂNG NHẬP</a>
-							<a href="" class="btn btn-primary register">ĐĂNG KÝ</a>
+							<a href="#" class="btn btn-primary register registerDK">ĐĂNG KÝ</a>
 						</div>
 					</div>
 				<?php 
@@ -90,7 +91,28 @@ include ('conn.php');
 		 				<a href=""><img src="images/card.svg" class="" alt=""></a>
 		            </div>
 		            <div class="text">
-		              <p><span>0</span> sản phẩm</p>
+		            <?php
+						$ok=1;
+						if(isset($_SESSION['cart']))
+						{
+							foreach($_SESSION['cart'] as $k=>$v)
+							{
+								if(isset($k))
+								{
+								$ok=2;
+								}
+							}
+						}
+
+						if ($ok != 2)
+						 { ?> 
+		              		<p><span>0</span> sản phẩm</p>
+			              <?php } else {
+								$items = $_SESSION['cart'];?>
+								<p><span><?php echo count($items) ?></span> sản phẩm</p>
+								<?php 
+							}
+						?>
 		              <p><span>0</span> đ</p>
 		            </div>
 		            <div class="clearfix"></div>
@@ -204,7 +226,7 @@ include ('conn.php');
 			
 			<?php 
 				if(!isset($_POST['submitRegis'])) {
-					die();
+					// die();
 				}
 				else {
 					$user_gis = $_POST['user_gis'];
