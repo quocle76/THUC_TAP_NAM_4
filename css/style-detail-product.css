@@ -77,6 +77,17 @@ body {
     color: #333;
     padding-bottom: 8px;
     border-bottom: 1px solid #e5e5e5; }
+  #mod-header-detail .dat-hang-detail .submitTT {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+    background: #fd6e1d;
+    border-radius: 4px;
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+    color: #fff;
+    margin: 8px 0; }
   #mod-header-detail .dat-hang-detail a {
     display: block;
     text-decoration: none;

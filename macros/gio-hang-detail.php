@@ -88,20 +88,23 @@ include ('conn.php');
 								while($data=mysql_fetch_array($query)){
 								 $total += $_SESSION['cart'][$data['id']]*$data['price'];
 							?> 
-							<p class="priceGia"><?php echo number_format($total) ?></p>
 							<?php } ?>
+							<p class="priceGia"><?php echo number_format($total,3) ?></p>
+							
 							<div class="clearfix"></div>
 							<p class="codeGiamgia"><a href=""><span>Sử dụng mã giảm giá</span></a></p>
 							<div class="clearfix"></div>
 						</div>
 						<div class="thongTinGiaohang">
-							<form>
+							<form method="POST">
 								<input type="radio" name="gender" value="female" id="female">
 								<label for="female">Anh</label>
 								<input type="radio" name="gender" value="male" id="male">
 								<label for="male">Chị</label> <br />
-								<input type="text"  name="name" placeholder="Họ và tên" />
-								<input type="text" name="sdt" placeholder="Số điện thoại" />
+								<input type="text"  name="name" value="<?php if(isset($_SESSION['name_user'])) {
+									echo $_SESSION['name_user']; }else {} ?>" placeholder="Họ và tên" />
+								<input type="text" name="sdt" value="<?php if(isset($_SESSION['phone_user'])) {
+									echo $_SESSION['phone_user']; }else {} ?>" placeholder="Số điện thoại" />
 								<div class="clearfix"></div>
 								<input type="text" name="yeu-cau" placeholder="Yêu cầu khác(không bắt buộc)" />
 								<p class="phuc-vu">Để được phục vụ nhanh hơn, <span>hãy chọn thêm:</span></p>
@@ -109,22 +112,60 @@ include ('conn.php');
 								<label for="adddress">Địa chỉ giao hàng</label>
 								<input type="radio" name="address" value="sieu-thi" id="sieu-thi">
 								<label for="sieu-thi">Nhận hàng tại siêu thị</label> <br />
-								<select>
-									<option>1</option>
-									<option>1</option>
-								</select>
 								<input type="text" placeholder="Số nhà, tên đường, phường / xã" name="phuong-xa" />
+								<select name="tinh-thanh" >
+									<option select="select">Chọn Tỉnh Thành/ Phố</option>
+										<?php $sql = "SELECT * FROM provinces ";
+										$query = mysql_query($sql); 	
+										while ($row = mysql_fetch_array($query)) { ?>
+										<option value="<?php echo $row['title']?>"><?php echo $row['title'] ?></option>
+										<?php } ?>	
+								</select>
 								<div class="clearfix"></div>
 								<div class="dat-hang-detail">
-									<a href="">THANH TOÁN ONLINE<p>Bằng thẻ ATM, Visa, Master</p></a>
-									<a href="">THANH TOÁN KHI NHẬN HÀNG<p>Xem hàng trước, không mua không sao</p></a>
+									<?php 
+										if(empty($_SESSION['name_user'])){
+												?> 
+												<a href="#" class="loginDN">ĐĂNG NHẬP ĐỂ TIẾP TỤC</a>
+										<?php } else {
+											?>
+												<a href="">THANH TOÁN ONLINE<p>Bằng thẻ ATM, Visa, Master</p></a>
+												
+												<a href="">THANH TOÁN KHI NHẬN HÀNG<p>Xem hàng trước, không mua không sao</p></a>
+											<?php 
+										}
+									?>
 								</div>
+								<input type="submit" name="submitTT"  class="submitTT" value="TIẾP TỤC" />
 							</form>
+							
 						</div>
+						<?php 
+								if(!isset($_POST['submitTT']))
+								{
+										
+								} 
+								else {
+										$name = $_POST['name'];
+										$phone = $_POST['sdt'];
+										$tinh = $_POST['tinh-thanh'];
+										$phong = $_POST['phuong-xa'];
+										$addmember = mysql_query("INSERT INTO `bill` (`name_bill`, `phone_bill`, `address1_bill`, `address2_bill`) VALUES ('$name', '$phone', '$tinh', '$phong')");
+								}
+							?>
 					</div>
 				</div>
 			</div>
 			<div class="phuongthucThanhtoan">
-				
+				<a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=quoc95ntu@gmail.com&product_name=087&price=1112111&return_url=thanhcong.php"><img src="https://www.nganluong.vn/css/newhome/img/button/safe-buy-2.png"border="0" /></a>
+				<?php $sql = "SELECT * FROM W" ?>
+				<form method="post" action="https://www.nganluong.vn/advance_payment.php">
+					<input type=hidden name=receiver value="duyhung862000@yahoo.com" />
+					<input type=hidden name=product value="" />
+					<input type=hidden name=price value="<?php echo $total ?>" />
+					<input type=hidden name=return_url value="http://complete.com/thank.php" />
+					<input type=hidden name=comments value="Hãy lập trình ghi chú đơn hàng của bạn vào đây" />
+					<input type=image src="https://www.nganluong.vn/data/images/merchant/button/btn-buynow-121.png" />
+				</form>
 			</div>
 		</div>

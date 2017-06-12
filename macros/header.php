@@ -223,7 +223,7 @@ include ('conn.php');
 				<input type="text" placeholder="Địa chỉ" name='address_gis' required />
 				<input type="file" name="uploadFilee" id="uploadFilee" />
 				<button type="submit" name="submitRegis">Register</button>
-			
+			</form>
 			<?php 
 				if(!isset($_POST['submitRegis'])) {
 					// die();

@@ -106,6 +106,18 @@ body {
 		border-bottom: 1px solid #e5e5e5;
 	}
 	.dat-hang-detail {
+		.submitTT {
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			padding: 5px 0;
+			background: #fd6e1d;
+			border-radius: 4px;
+			font-family: 'Roboto-Medium';
+			font-size: 16px;
+			color: #fff;
+			margin: 8px 0;
+		}
 		a {
 			display: block;
 			text-decoration: none;
