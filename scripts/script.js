@@ -91,6 +91,15 @@ var sliderproductdetail = $('#slider-product-detail');
 			$('.registerL').show();
 		});
 	}
+	function ShowThanhToan() {
+		$('.submitTT').click(function() {
+			$('.phuongthucThanhtoan').show();
+		});
+		$('.close_TT').click(function(){
+			$('.phuongthucThanhtoan').hide();
+
+		});
+	}
 $(document).ready(function(){
 	showDropInfo();
 	showDropInfoo();
@@ -101,4 +110,5 @@ $(document).ready(function(){
 	CloseLogin();
 	ShowDN();
 	ShowRE();
+	ShowThanhToan();
 });

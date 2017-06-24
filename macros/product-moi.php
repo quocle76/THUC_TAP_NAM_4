@@ -3,7 +3,7 @@
 		<div class="floor__text1">
 			<div class="floor__text__val">TẦNG</div>
 		</div>
-		<div class="floor__number">3</div>
+		<div class="floor__number">2</div>
 	</div>
 	<div class="column-4 column"></div>
 	<div class="floor__name">
@@ -20,7 +20,7 @@
 			?>
 			<div class="col-md-3">
 			<div class="item">
-				<img src="<?php echo 'images/product/'.$row['images'] ; ?>">
+				<img src="<?php echo 'images/'.$row['images'] ; ?>">
 				<div class="des">
 					<h3><?php echo $row['name'] ?></h3>
 					<p><span class="primary-km-price"><?php echo number_format($row['price']-$row['price']*$row['promotion']/100,3).'₫'; ?></span><?php if($row['promotion']) 

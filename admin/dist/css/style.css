@@ -4,3 +4,21 @@
 	color: #3c8dbc;
 	padding-top: 23%;
 }
+.hinh-admin-product img  {
+	width: 100%;
+}
+.hanhdong {
+	width: 100%;
+}
+.addproduct img {
+	width: 5%;
+	float: right;
+	cursor: pointer;
+}
+.img-user {
+	width: 7%;
+}
+.avatar-user img {
+	width: 40px;
+	line-height: 40px;
+}

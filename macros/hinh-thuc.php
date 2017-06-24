@@ -140,7 +140,7 @@ include ('conn.php');
 
 						</div>
 						<?php
-								if(!isset($_POST['submitTT']) && $_POST['gender'])
+								if(!isset($_POST['submitTT']))
 								{
 
 								}
@@ -159,5 +159,20 @@ include ('conn.php');
 					</div>
 				</div>
 			</div>
-
+			<div class="phuongthucThanhtoan">
+				<p class=ngan-luong>Thanh Toán Bằng Ngân Lượng</p>
+				<?php $sql = "SELECT * FROM bill ";
+							$query = mysql_query($sql);
+							$dataSHD = mysql_fetch_array($query);
+				 ?>
+				<form  class="form-thanh-toan" method="post" action="https://www.nganluong.vn/advance_payment.php">
+					<input type=hidden name=receiver value="quoc95ntu@gmail.com" />
+					<input type=hidden name=product value="<?php echo $dataSHD['id'] ?>" />
+					<input type=hidden name=price value="<?php echo $total ?>" />
+					<input type=hidden name=return_url value="http://complete.com/thank.php" />
+					<input type=hidden name=comments value="dhsjhfdjhfjk" />
+					<input type=image src="https://www.nganluong.vn/data/images/merchant/button/btn-buynow-121.png" />
+				</form>
+				<img src="images/close-TT.jpg" class="close_TT">
+			</div>
 		</div>

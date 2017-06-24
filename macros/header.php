@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php 
+<?php
 session_start();
 include ('conn.php');
 ?>
@@ -44,8 +44,8 @@ include ('conn.php');
 							<a href="#" class="btn btn-primary register registerDK">ĐĂNG KÝ</a>
 						</div>
 					</div>
-				<?php 
-					} 
+				<?php
+					}
 				?>
 				<?php if(!empty($_SESSION['name_user'])) { ?>
 					<div class="done-sigin">
@@ -77,8 +77,8 @@ include ('conn.php');
 			                </ul>
               			</div>
 					</div>
-				<?php 
-					} 
+				<?php
+					}
 					else {
 
 					}
@@ -88,7 +88,7 @@ include ('conn.php');
 				</div>
 				<div class="card">
             		<div class="img-card">
-		 				<a href=""><img src="images/card.svg" class="" alt=""></a>
+		 				<a href="gio-hang.php"><img src="images/card.svg" class="" alt=""></a>
 		            </div>
 		            <div class="text">
 		            <?php
@@ -105,12 +105,12 @@ include ('conn.php');
 						}
 
 						if ($ok != 2)
-						 { ?> 
+						 { ?>
 		              		<p><span>0</span> sản phẩm</p>
 			              <?php } else {
 								$items = $_SESSION['cart'];?>
 								<p><span><?php echo count($items) ?></span> sản phẩm</p>
-								<?php 
+								<?php
 							}
 						?>
 		              <p><span>0</span> đ</p>
@@ -130,20 +130,20 @@ include ('conn.php');
 				      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>                        
+				        <span class="icon-bar"></span>
 				      </button>
 				    </div>
 				    <div class="collapse navbar-collapse" id="myNavbar">
 				      <ul class="nav navbar-nav">
 				        <li class="active category "><a href="#"> <i class="fa fa-align-justify"></i>  DANH MỤC SẢN PHẨM</a>
 				        	<ul class="sub-category">
-				        	<?php 
+				        	<?php
 				        		$sql = 'SELECT * FROM category';
 				        		$query = mysql_query($sql);
 				        		while ($category = mysql_fetch_array($query)) { ?>
-				        	
+
 					            <li><a href="<?php echo $category['link_category'] ?>"> <i class="fa fa-angle-right"></i> <?php echo $category['name_category'] ?></a></li>
-					        <?php		
+					        <?php
 				        		}
 				        	 ?>
 				          </ul>
@@ -159,7 +159,7 @@ include ('conn.php');
 				  </div>
 				</nav>
 			</div>
-			<?php include('macros/slider-home.html'); ?>
+			<?php include('macros/slider-home.php'); ?>
 			<div class="new-paper">
 				<figure>
 			        <h2><a href="/tin-tuc">Tin công nghệ</a></h2>
@@ -167,7 +167,7 @@ include ('conn.php');
 			            <a href="/tin-tuc" class="readmore">Đọc thêm</a>
 			    </figure>
 				<ul>
-					<li><a href="">Nokia 3310 đời 2017: Không đơn thuần chỉ là một "cục gạch"! 
+					<li><a href="">Nokia 3310 đời 2017: Không đơn thuần chỉ là một "cục gạch"!
 					</a><img src="images/nokia.jpg"></li>
 					<li><a href="">Apple tung chiến dịch quảng cáo lôi kéo người dùng Android và Windows Phone </a><img src="images/window.jpg"></li>
 					<li><a href="">Honor 6A ra mắt: RAM 3GB Snapdragon 435, Quick Charge 3.0, Android 7.1 giá từ</a><img src="images/window.jpg"></li>
@@ -182,14 +182,14 @@ include ('conn.php');
 			</div>
 			<i></i>
 
-			<form method="POST">
+			<form action="index.php" method="POST">
 				<input type="text" placeholder="username" name="id_user" required>
 				<input type="password" placeholder="password" name="pass_user" required>
 				<button type="submit" name="submitSig">Sign in</button>
 			</form>
-			<?php 
+			<?php
 				if(!isset($_POST['submitSig'])) {
-					
+
 				}
 				else {
 					$id_user = $_POST['id_user'];
@@ -201,6 +201,9 @@ include ('conn.php');
 					if($total > 0){
 						$_SESSION['name_user'] = $row['name_user'];
 						$_SESSION['avatar'] =  $row['avatar'];
+						$_SESSION['phone_user'] = $row['phone_user'];
+						// header('locationHeader: index.php');
+						
 					}
 					else {
 						echo  '<p style="color: red; font-size: 16px;"> Tài khoản hoặc mật khẩu của bạn bị sai.</p>';
@@ -224,7 +227,7 @@ include ('conn.php');
 				<input type="file" name="uploadFilee" id="uploadFilee" />
 				<button type="submit" name="submitRegis">Register</button>
 			</form>
-			<?php 
+			<?php
 				if(!isset($_POST['submitRegis'])) {
 					// die();
 				}
@@ -248,22 +251,22 @@ include ('conn.php');
 							            $path = 'images/'; //Lưu trữ tập tin vào thư mục: images
 							            $tmp_name = $_FILES['uploadFilee']['tmp_name'];
 							            $hinh = $_FILES['uploadFilee']['name'];
-							            $type = $_FILES['uploadFilee']['type']; 
-							            $size = $_FILES['uploadFilee']['size']; 
+							            $type = $_FILES['uploadFilee']['type'];
+							            $size = $_FILES['uploadFilee']['size'];
 							            //Upload file
 							            move_uploaded_file($tmp_name,$path.$hinh);
-					            
+
 					        		}
 						    	}
-						    	else 
+						    	else
 						    	{
 						        	echo 'Tập tin phải là hình ảnh';
 						    	}
-						
-					} else 
+
+					} else
 					{
 						echo 'Vui lòng chọn tập tin';
-					}	 
+					}
 
 					if($user_gis && $mail_gis && $pass_gis && $pass_gisre && $phone_gis && $address_gis && $pass_gis == $pass_gisre){
 						$sql = "SELECT * FROM user WHERE email_user = '$mail_gis'";

@@ -2,7 +2,42 @@
   background: #f0f0f0; }
   #mod-header-detail .gio-hang-detail {
     max-width: 600px;
-    margin-top: 50px; }
+    margin-top: 50px;
+    position: relative; }
+  #mod-header-detail .phuongthucThanhtoan {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    max-width: 600px;
+    background: rgba(51, 51, 51, 0.89); }
+    #mod-header-detail .phuongthucThanhtoan .form-thanh-toan {
+      position: absolute;
+      top: 64px;
+      left: 32px; }
+    #mod-header-detail .phuongthucThanhtoan .ngan-luong {
+      margin-top: 32px;
+      color: #fff;
+      font-size: 18px;
+      padding-left: 32px; }
+    #mod-header-detail .phuongthucThanhtoan .close_TT {
+      width: 7%;
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      background: #fff;
+      cursor: pointer; }
+  #mod-header-detail .submitTT {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 12px;
+    background: #fd6e1d;
+    border-radius: 4px;
+    font-family: 'Roboto-Medium';
+    font-size: 16px;
+    color: #fff;
+    margin: 8px 0; }
   #mod-header-detail .content-gio-hang-detail .action-gio-hang {
     color: #288ad6;
     font-family: 'Roboto-Regular';
